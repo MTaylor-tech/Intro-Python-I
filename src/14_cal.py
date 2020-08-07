@@ -31,6 +31,23 @@ import sys
 import calendar
 from datetime import datetime
 
-print(calendar.textCalendar())
-# for arg in sys.argv:
-#     print(f"{arg}")
+month = datetime.now().month
+year = datetime.now().year
+
+if len(sys.argv)==1:
+    pass
+elif len(sys.argv)==2:
+    month = int(sys.argv[1])
+elif len(sys.argv)==3:
+    year = int(sys.argv[2])
+else:
+    print("Please enter the month or month and year\n")
+    print("python 14_cal.py [month] [year]")
+    exit()
+
+calendar.setfirstweekday(calendar.SUNDAY)
+c = calendar.monthcalendar(year, month)
+print("Calendar for {}/{}\n".format(month,year))
+print("  Sun   Mon   Tue   Wed   Thu   Fri   Sat")
+y = [["{:2d}".format(number) for number in line] for line in c]
+[print(l) for l in y]
