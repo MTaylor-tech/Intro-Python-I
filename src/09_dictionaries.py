@@ -61,3 +61,5 @@ for place in waypoints:
 #or
 
 [[print(key,value) for key,value in place.items()] for place in waypoints]
+
+[print(f'{p["name"]}: {p["lat"]}, {p["lon"]}') for p in waypoints]
