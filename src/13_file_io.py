@@ -21,8 +21,8 @@ foo.close()
 
 # YOUR CODE HERE
 bar = open("./bar.txt",'w')
-bar.write("Now is the time for all good men to come to the aid of their party\n")
-bar.write("How vexingly quick daft zebras jump!\n")
+bar.write("Now is the time for all good men to come to the aid of their party")
+bar.write("\nHow vexingly quick daft zebras jump!\n")
 bar.write("Sphinx of black quartz, judge my vow")
 bar.close()
 bar = open("./bar.txt",'r')
