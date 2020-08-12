@@ -39,6 +39,7 @@ if len(sys.argv)==1:
 elif len(sys.argv)==2:
     month = int(sys.argv[1])
 elif len(sys.argv)==3:
+    month = int(sys.argv[1])
     year = int(sys.argv[2])
 else:
     print("Please enter the month or month and year\n")
